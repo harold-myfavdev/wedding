@@ -24,6 +24,11 @@ header {
     display: block;
     width: 20vw;
 }
+.header_p {
+    font-size: 3vw;
+    font-family: "Cookie", serif;
+    text-align: center;
+}
 
 .header_text {
     width: fit-content;
