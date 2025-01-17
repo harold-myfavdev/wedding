@@ -42,6 +42,9 @@ header {
     font-size: 5vw;
     margin-top: .5em;
     transform: scale(1.5, 1.5);    
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-clip: text;
+    color: transparent;
 }
 
 .hero {
@@ -66,22 +69,31 @@ header {
     grid-row: 2 / 3;
     color: white;
     /* text-shadow: -3px 4px 0px rgba(0,0,0,0.5); */
-    text-shadow: -0.3vw -0.1vw 0vw   rgba(0,0,0,0.5);
+    /* text-shadow: -0.3vw -0.1vw 0vw   rgba(0,0,0,0.5); */
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-clip: text;
+    color: transparent;
 }
 
 .hero_btn {
+    align-self: stretch;
+    justify-self: end;
+    width: 5em;
+    height: 3em;
     color: white;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     padding: 0 1vw;
-    margin: 1vh 0;
+    /* margin: 1vh 0; */
     font-size: 3vw;
     font-family: inherit;
     border-top-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
+    border-radius: 10vw 0;
     /* background: rgb(248,213,61); */
     border-color: white;
-    background: linear-gradient(90deg, rgba(248,213,61,1) 0%, rgba(195,137,1,1) 50%, rgba(255,236,108,1) 100%);
+    /* background: linear-gradient(90deg, rgba(248,213,61,1) 0%, rgba(195,137,1,1) 50%, rgba(255,236,108,1) 100%); */
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
     text-shadow: -0.3vw -0.1vw 0vw   rgba(0,0,0,0.5);
     transition: transform 500ms;
     /* transition: background-color 1s; */
@@ -89,5 +101,5 @@ header {
 
 .hero_btn:hover {
     /* background: rgb(248,213,61); */
-    transform: scale(1.1, 1.1);
+    transform: translateY(-3px);
 }
