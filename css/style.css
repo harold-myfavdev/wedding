@@ -34,9 +34,9 @@ body {
     border: .6vh solid #d7ab58;
     border-radius: 9vh;        
     margin: auto;   
-    overflow: hidden;
-    opacity: .6;
+    overflow: hidden;    
 }
+
 
 header {
     height: 100%;
