@@ -14,6 +14,6 @@ const options = {
 };
 
 // Format the date
-const weddingDate = currentDate.toLocaleDateString('en-GB', options);
-// document.querySelector('p.hero_p').innerHTML = weddingDate;
-// console.log(weddingDate);
+const weddingDate = currentDate.toLocaleDateString(undefined, options);
+document.querySelector('p.wedding_text strong').innerHTML = weddingDate;
+console.log(weddingDate);
