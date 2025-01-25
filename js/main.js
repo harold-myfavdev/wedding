@@ -15,5 +15,5 @@ const options = {
 
 // Format the date
 const weddingDate = currentDate.toLocaleDateString(undefined, options);
-document.querySelector('p.wedding_text strong').innerHTML = weddingDate;
-console.log(weddingDate);
+const currentYear = currentDate.getFullYear();
+document.querySelector('span.year').innerHTML += `-${currentYear}`;
