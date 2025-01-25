@@ -15,7 +15,7 @@ img {
 body {    
     color: white;
     background-color: rgb(14, 14, 14);
-    height: 100vh;
+    height: 100dvh;
 }
 
 .body-wrapper-1 {
@@ -72,8 +72,9 @@ footer {
 }
 
 .hero_img {    
-    height: inherit;
-    grid-area: 1 / 1;        
+    /* height: inherit; */
+    height: 100%;
+    grid-area: 1 / 1;         
 }
 
 .hero_title {
