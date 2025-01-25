@@ -24,7 +24,9 @@ body {
     background-size:contain;    
     padding: 3vh 5vh;
     margin: auto;
-    aspect-ratio: .71 / 1;    
+    /* aspect-ratio: .71 / 1;     */
+    width: 100%;
+    max-width: 70vh;    
 }
 
 .body-wrapper-2 {        
@@ -76,7 +78,7 @@ footer {
 
 .hero_title {
     grid-area: 1 / 1;    
-    font-size: 8vh;  
+    font-size: 5vh;  
     /* font-size: 2.5em;     */
     /* font-size: clamp(1em, 5vh, 5em);     */
     font-family: 'Cookie'; 
