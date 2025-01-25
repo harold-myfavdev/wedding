@@ -1,32 +1,19 @@
-document.getElementById('rsvpForm').addEventListener('submit', async function (event) {
-    event.preventDefault();
+/* Set Dynamic Wedding Date */
+// Get the current date
+const currentDate = new Date();
 
-    const form = event.target;
-    const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-    };
+// Add 30 days to the current date
+currentDate.setDate(currentDate.getDate() + 30);
 
-    const responseMessage = document.getElementById('responseMessage');
-    const YOUR_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwcf2wvXgQwLsG2nwm5iMW4H62nJlho1iXH1WLbWHu_2qacbIWa3cu9pKmbw_4VxA4/exec'
-    try {
-        const response = await fetch(YOUR_WEB_APP_URL, {
-            method: 'POST',
-            body: JSON.stringify(formData),
-            headers: { 'Content-Type': 'application/json' }
-        });
+// Define options for date formatting
+const options = {
+  weekday: 'long',   // Full name of the weekday
+  day: '2-digit',    // Day of the month as two digits
+  month: 'long',     // Full name of the month
+  year: 'numeric',   // Four-digit year
+};
 
-        const result = await response.json();
-
-        if (result.status === 'success') {
-            responseMessage.textContent = 'RSVP submitted successfully!';
-            form.reset();
-        } else {
-            responseMessage.textContent = 'Something went wrong. Please try again.';
-        }
-    } catch (error) {
-        console.error(error);
-        responseMessage.textContent = 'Error submitting the RSVP.';
-    }
-});
+// Format the date
+const weddingDate = currentDate.toLocaleDateString('en-GB', options);
+// document.querySelector('p.hero_p').innerHTML = weddingDate;
+// console.log(weddingDate);
