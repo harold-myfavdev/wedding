@@ -24,7 +24,7 @@ body {
     background-size:contain;    
     padding: 3vh 5vh;
     margin: auto;
-    aspect-ratio: .71 / 1;
+    aspect-ratio: .71 / 1;    
 }
 
 .body-wrapper-2 {        
@@ -35,6 +35,7 @@ body {
     border-radius: 9vh;        
     margin: auto;   
     overflow: hidden;
+    opacity: .6;
 }
 
 header {
