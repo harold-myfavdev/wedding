@@ -80,9 +80,9 @@ footer {
 
 .hero_title {
     grid-area: 1 / 1;    
-    font-size: 5vh;  
+    /* font-size: 5vh;   */
     /* font-size: 2.5em;     */
-    /* font-size: clamp(1em, 5vh, 5em);     */
+    font-size: clamp(1em, 5vh, 5em);    
     font-family: 'Cookie'; 
     /* text-shadow: 2px 3px 20px #f7f7f7; */
     text-align: center;    
