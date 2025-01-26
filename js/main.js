@@ -24,8 +24,6 @@ const rsvpModal = document.querySelector('.rsvp-form.modal');
 const heroCTA = document.querySelector('.hero_cta');
 
 heroCTA.addEventListener('click', (e) => { 
-  console.log(e.target);
-  console.log(rsvpModal)  
   rsvpModal.style.display =  'block';
 })
 
@@ -33,10 +31,6 @@ heroCTA.addEventListener('click', (e) => {
 document.addEventListener('click', (event) => {
   if (!rsvpModal.contains(event.target) && event.target !== heroCTA) {
     rsvpModal.style.display = 'none'; // Hide the modal
-    console.log(event.target)
-  }
-  if (rsvpModal.contains(event.target)){
-    console.log(event.target)
   }
 });
 
@@ -44,4 +38,30 @@ window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     rsvpModal.style.display = 'none';
   }
+});
+
+const rsvpForm = document.querySelector('#rsvp_form');
+rsvpForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  // Send the form data via Fetch API to your Cloudflare Worker
+  fetch(form.action, {
+    method: 'POST',
+    body: formData    
+    })
+    .then(response => {
+        if (response.ok) {
+            // Hide the form after successful submission
+            rsvpForm.style.display = 'none';
+            alert("Submit successful.");
+        } else {
+            alert("There was an issue with the submission.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+    });
 });

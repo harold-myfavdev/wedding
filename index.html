@@ -21,34 +21,34 @@
                     </figure>
                 </header>
                 <main>
-                    <form class="rsvp-form modal">
+                    <form id="rsvp_form" action="https://d1-wedding.advinculaharoldl-official.workers.dev/" class="rsvp-form modal" method="POST">
                         <h2>Wedding RSVP</h2>
                         
                         <div class="form-group">
-                          <label for="name">Full Name</label>
-                          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                          <label for="full_name">Full Name</label>
+                          <input type="text" id="full_name" name="full_name" placeholder="Enter your full name" required>
                         </div>
                         
                         <div class="form-group">
-                          <label for="email">Email Address</label>
-                          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                          <label for="email_add">Email Address</label>
+                          <input type="email_add" id="email_add" name="email_add" placeholder="Enter your email address" required>
                         </div>
                         
                         <div class="form-group">
-                          <label for="attending">Will you attend?</label>
+                          <label for="will_attend">Will you attend?</label>
                           <div class="radio-group">
                             <label>
-                              <input type="radio" name="attending" value="yes" required> Yes
+                              <input type="radio" name="will_attend" value="yes" required> Yes
                             </label>
                             <label>
-                              <input type="radio" name="attending" value="no"> No
+                              <input type="radio" name="will_attend" value="no"> No
                             </label>
                           </div>
                         </div>
                         
                         <div class="form-group">
-                          <label for="guests">Number of Guests (including yourself)</label>
-                          <select id="guests" name="guests">
+                          <label for="num_guest">Number of Guests (including yourself)</label>
+                          <select id="num_guest" name="num_guest">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -57,8 +57,8 @@
                         </div>
                         
                         <div class="form-group">
-                          <label for="dietary">Dietary Restrictions</label>
-                          <textarea id="dietary" name="dietary" placeholder="Let us know if you have any dietary restrictions"></textarea>
+                          <label for="dietary_restrictions">Dietary Restrictions</label>
+                          <textarea id="dietary_restrictions" name="dietary_restrictions" placeholder="Let us know if you have any dietary restrictions"></textarea>
                         </div>
                         
                         <button type="submit" class="submit-btn">Submit RSVP</button>

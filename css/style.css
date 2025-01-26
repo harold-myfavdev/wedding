@@ -22,7 +22,8 @@ body {
     height: 100%;        
     background-image: url(/img/gypsophila-gray-background-with-copy-space-center.jpg);    
     background-size:contain;    
-    padding: 3vh 5vh;
+    /* padding: 3vh 5vh; */
+    padding: 3% 5%;
     margin: auto;
     /* aspect-ratio: .71 / 1;     */
     width: 100%;
@@ -34,7 +35,7 @@ body {
     background-size: cover;    
     background-repeat: no-repeat;
     border: .6vh solid #d7ab58;
-    border-radius: 9vh;        
+    border-radius: 20px;        
     margin: auto;   
     overflow: hidden;    
     display: grid;
@@ -56,6 +57,8 @@ main {
     grid-row: 2 / 3;
     justify-self: center;
     align-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 footer {
@@ -140,21 +143,25 @@ a.domain:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    width: 100%;
+    width: 90%;
 }
+
 .rsvp-form h2 {
     text-align: center;
     color: #333;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
+
 .form-group input, 
 .form-group select, 
 .form-group textarea {
@@ -163,18 +170,22 @@ a.domain:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .form-group textarea {
     resize: none;
     height: 80px;
 }
+
 .form-group .radio-group {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
+
 .form-group .radio-group label {
     font-weight: normal;
 }
+
 .submit-btn {
     display: block;
     width: 100%;
@@ -187,6 +198,7 @@ a.domain:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .submit-btn:hover {
     background-color: #e65b50;
 }
